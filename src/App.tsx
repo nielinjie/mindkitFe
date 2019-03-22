@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 
-import GraphV from './component/GraphV';
+import {GraphV} from './component/GraphV';
 
 class App extends React.Component {
   public render() {
