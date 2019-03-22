@@ -5,7 +5,9 @@
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts-ts": "3.1.0"
+    "react-scripts-ts": "3.1.0",
+    "viser-graph-react": "^0.1.12",
+    "viser-react": "^2.4.5"
   },
   "scripts": {
     "start": "react-scripts-ts start",
