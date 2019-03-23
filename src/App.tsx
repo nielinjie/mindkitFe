@@ -1,12 +1,15 @@
 import * as React from 'react';
 import './App.css';
 
-import {GraphV} from './component/GraphV';
+import { TreeGraph } from './component/TreeGraph';
+import { Suspense } from 'react';
 
 class App extends React.Component {
   public render() {
     return (
-      <GraphV/>
+      <Suspense fallback={<span>Loading...</span>}>
+        <TreeGraph />
+      </Suspense>
     );
   }
 }

@@ -8,7 +8,7 @@ const graph = {
   type: 'graph',
   width: 2000,
   height: 1000,
-  fitView: 'cc',
+  fitView: 'lc',
   fitViewPadding: true,
   animate: true,
   minZoom: 0.2,
@@ -52,7 +52,7 @@ export const GraphV: FC = () => {
     
   }
 
-  var layout = new Layouts.Dagre();
+  var layout = new Layouts.Dagre({rankdir:'LR',ranker:'longest-path'});
   return (
     <div>
       <Graph {...graph} data={data} layout = {layout}>
