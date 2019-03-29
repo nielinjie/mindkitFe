@@ -15,7 +15,7 @@ export var graph = new G6.TreeGraph({
       anchorPoints: [[0, 0.5], [1, 0.5]]
     },
     defaultEdge: {
-      shape: 'cubic-horizontal'
+      shape: 'tree-edge'
     },
     edgeStyle: {
       default: {
@@ -23,7 +23,7 @@ export var graph = new G6.TreeGraph({
       }
     },
     layout: function layout(data) {
-      return Hierarchy.compactBox(data, {
+      return Hierarchy.indented(data, {
         direction: 'LR',
         getId: function getId(d) {
           return d.id;
@@ -31,11 +31,11 @@ export var graph = new G6.TreeGraph({
         getHeight: function getHeight() {
           return 16;
         },
-        getWidth: function getWidth() {
-          return 16;
-        },
+        // getWidth: function getWidth() {
+        //   return 16;
+        // },
         getVGap: function getVGap() {
-          return 10;
+          return 8;
         },
         getHGap: function getHGap() {
           return 80;
