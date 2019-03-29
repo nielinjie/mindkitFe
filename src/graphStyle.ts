@@ -29,13 +29,13 @@ export var graph = new G6.TreeGraph({
           return d.id;
         },
         getHeight: function getHeight() {
-          return 16;
+          return 12;
         },
         // getWidth: function getWidth() {
         //   return 16;
         // },
         getVGap: function getVGap() {
-          return 8;
+          return 6;
         },
         getHGap: function getHGap() {
           return 80;

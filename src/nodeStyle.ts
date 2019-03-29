@@ -13,8 +13,8 @@ G6.registerNode('tree-node', {
     drawShape: function drawShape(cfg, group) {
         var circle = group.addShape('circle', {
             attrs: {
-                x:0,
-                y:0,
+                x: 0,
+                y: 0,
                 r: 5,
                 fill: '#6699ff',
                 stroke: '#666'
@@ -26,7 +26,7 @@ G6.registerNode('tree-node', {
             attrs: {
                 text: content,
                 x: 10,//circle.x + 20,
-                y:0,// circle.y,
+                y: 0,// circle.y,
                 textAlign: 'left',
                 textBaseline: 'middle',
                 fill: '#1a2a3a'
@@ -46,11 +46,11 @@ G6.registerNode('tree-node', {
                 className: 'collapse-icon'
             });
         }
-        
+
         return circle;
     },
-    getAnchorPoints:function getAnchorPoints(){
-        return  [
+    getAnchorPoints: function getAnchorPoints() {
+        return [
             [0.5, 0.5]]
     }
 }, 'single-shape');
