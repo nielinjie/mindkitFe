@@ -2,7 +2,7 @@ const path = require('path');
 const context = path.resolve(__dirname, '../..');
 
 module.exports = {
-  entry: path.resolve(__dirname, './src/index.tsx'),
+  entry: path.resolve(__dirname, './src/index.ts'),
   context,
   mode: 'development',
   target: 'web',
