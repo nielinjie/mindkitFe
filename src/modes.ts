@@ -1,5 +1,5 @@
 import { EXPAND_ICON, COLLAPSE_ICON } from './nodeStyle';
-
+import './hover'
 
 export default {
     default: [
@@ -21,6 +21,12 @@ export default {
             }
         },
         'drag-canvas',
+        {
+            type: 'click-select',
+            multiple:false
+        },
+        'hover-node'
+       
         // {
         //     type: 'zoom-canvas',
         //     sensitivity: 1

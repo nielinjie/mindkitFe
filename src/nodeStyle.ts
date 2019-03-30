@@ -9,6 +9,15 @@ export var COLLAPSE_ICON = function COLLAPSE_ICON(x, y, r) {
 export var EXPAND_ICON = function EXPAND_ICON(x, y, r) {
     return [['M', x, y], ['a', r, r, 0, 1, 0, r * 2, 0], ['a', r, r, 0, 1, 0, -r * 2, 0], ['M', x + 2, y], ['L', x + 2 * r - 2, y], ['M', x + r, y - r + 2], ['L', x + r, y + r - 2]];
 };
+
+
+function getFocusState(item): 'selected' | 'hovering' | 'none' {
+    const hovering: boolean = item.hasState('hovering')
+    const selected: boolean = item.hasState('selected')
+    if (selected) return 'selected'
+    return hovering ? 'hovering' : 'none'
+}
+
 G6.registerNode('tree-node', {
     drawShape: function drawShape(cfg, group) {
         var circle = group.addShape('circle', {
@@ -46,12 +55,26 @@ G6.registerNode('tree-node', {
                 className: 'collapse-icon'
             });
         }
-
         return circle;
     },
     getAnchorPoints: function getAnchorPoints() {
         return [
             [0.5, 0.5]]
+    },
+    setState(name, value, item) {
+        const group = item.getContainer();
+        const shape = group.get('children')[0]; // 顺序根据 draw 时确定
+
+        const focusState = getFocusState(item)
+        shape.attr('fill',
+            {
+                "hovering": 'blue',
+                'selected': 'red',
+                'none': '#6699ff'
+            }[focusState]
+        )
+        // graph.paint()
+        // group.paint()
     }
 }, 'single-shape');
 
