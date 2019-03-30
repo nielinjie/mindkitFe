@@ -1,45 +1,21 @@
 
 import * as G6 from '@antv/g6'
-import * as Hierarchy from '@antv/hierarchy'
 
 import modes from './modes';
 
+import  layout from './layout'
 
 export var graph = new G6.TreeGraph({
     container: 'mountNode',
-    width: window.innerWidth,
-    height: window.innerHeight,
+    renderer:'svg',
+    width: 1000,
+    height: 800,
     modes,
     defaultNode: {
       shape: 'tree-node',
-      anchorPoints: [[0, 0.5], [1, 0.5]]
     },
     defaultEdge: {
       shape: 'tree-edge'
     },
-    edgeStyle: {
-      default: {
-        stroke: '#A3B1BF'
-      }
-    },
-    layout: function layout(data) {
-      return Hierarchy.indented(data, {
-        direction: 'LR',
-        getId: function getId(d) {
-          return d.id;
-        },
-        getHeight: function getHeight() {
-          return 12;
-        },
-        // getWidth: function getWidth() {
-        //   return 16;
-        // },
-        getVGap: function getVGap() {
-          return 6;
-        },
-        getHGap: function getHGap() {
-          return 80;
-        }
-      });
-    }
+    layout
   });

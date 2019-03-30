@@ -20,6 +20,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "@antv/g": "^3.4.2",
     "@antv/g6": "^3.0.0",
     "@antv/hierarchy": "^0.4.0",
     "antd": "^3.15.0",

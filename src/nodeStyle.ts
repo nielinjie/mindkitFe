@@ -54,3 +54,22 @@ G6.registerNode('tree-node', {
             [0.5, 0.5]]
     }
 }, 'single-shape');
+
+G6.registerNode('html', {
+    draw(cfg, group) {
+        const htmlShape = group.addShape('dom', {
+            attrs: {
+                x: 0,
+                y: 0,
+                width: 100,
+                height: 24,
+                html: '<div class="editor-div" contenteditable>your customized node</div>'
+            }
+        });
+        return htmlShape;
+    },
+    getAnchorPoints: function getAnchorPoints() {
+        return [
+            [0.5, 0.5]]
+    }
+});

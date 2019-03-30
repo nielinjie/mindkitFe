@@ -21,9 +21,9 @@ export default {
             }
         },
         'drag-canvas',
-        {
-            type: 'zoom-canvas',
-            sensitivity: 1
-        }
+        // {
+        //     type: 'zoom-canvas',
+        //     sensitivity: 1
+        // }
     ]
 } 
