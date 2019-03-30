@@ -9,19 +9,15 @@ G6.registerBehavior('hover-node', {
             'node:mouseover': 'onEnter'
         };
     },
-
-    // 事件处理函数
     onEnter(e) {
         const graph = this.graph;
         const node = e.item;
-        // console.log(node)
         graph.setItemState(node, 'hovering', true);
         graph.paint()
     },
     onLeave(e) {
         const graph = this.graph;
         const node = e.item;
-        // console.log(node)
         graph.setItemState(node, 'hovering', false);
         graph.paint()
 

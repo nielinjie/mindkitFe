@@ -1,9 +1,9 @@
 
 import * as G6 from '@antv/g6'
 
-import modes from './modes';
+import modes from '../modes';
 
-import  layout from './layout'
+import  layout from '../layout'
 
 export var graph = new G6.TreeGraph({
     container: 'mountNode',

@@ -16,3 +16,10 @@ body {
   margin-top: 5px;
   padding: 2px 3px;
 }
+
+svg text{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

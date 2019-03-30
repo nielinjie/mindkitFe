@@ -1,8 +1,8 @@
 
 import * as $ from 'jquery'
-import  './nodeStyle'
-import './edgeStyle'
-import {graph} from './graphStyle'
+import  './style/nodeStyle'
+import './style/edgeStyle'
+import {graph} from './style/graphStyle'
 import  './index.css'
 
 $.getJSON('http://localhost:8080/treeNode', function(data) {

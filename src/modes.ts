@@ -1,5 +1,5 @@
-import { EXPAND_ICON, COLLAPSE_ICON } from './nodeStyle';
-import './hover'
+import { EXPAND_ICON, COLLAPSE_ICON } from './style/nodeStyle';
+import './behavior/hover'
 
 export default {
     default: [
