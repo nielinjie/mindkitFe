@@ -1,5 +1,6 @@
 import { EXPAND_ICON, COLLAPSE_ICON } from './style/nodeStyle';
 import './behavior/hover'
+import './behavior/keys'
 
 export default {
     default: [
@@ -25,7 +26,8 @@ export default {
             type: 'click-select',
             multiple:false
         },
-        'hover-node'
+        'hover-node',
+        'keypress'
        
         // {
         //     type: 'zoom-canvas',

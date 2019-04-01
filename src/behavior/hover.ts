@@ -20,6 +20,5 @@ G6.registerBehavior('hover-node', {
         const node = e.item;
         graph.setItemState(node, 'hovering', false);
         graph.paint()
-
     }
 });
